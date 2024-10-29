@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagement_flutter/home_screen.dart';
+import 'package:statemanagement_flutter/views/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
