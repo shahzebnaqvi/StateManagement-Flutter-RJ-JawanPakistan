@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:statemanagement_flutter/controllers/home_controllers/home_controller.dart';
 import 'package:statemanagement_flutter/utils/color_constant.dart';
 import 'package:statemanagement_flutter/utils/font_constant.dart';
+import 'package:statemanagement_flutter/views/about/about_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -11,12 +12,27 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GetX<HomeController>(builder: (GetxContext) {
-        return Center(
-          child: Text("${homeControl.count.value}",
-              style: TextStyle(
-                color: ColorConstant.primaryColor,
-                fontSize: FontConstant.bigHeadingTextSize,
-              )),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() => AboutScreen(), arguments: {"data1": "abc"});
+                // Get.off(AboutScreen());
+                // Get.offAll(AboutScreen());
+                // Get.offUntil(page, (route) => false);
+              },
+              child: Text("To About"),
+            ),
+            Center(
+              child: Text("${homeControl.count.value}",
+                  style: TextStyle(
+                    color: ColorConstant.primaryColor,
+                    fontSize: FontConstant.bigHeadingTextSize,
+                  )),
+            ),
+          ],
         );
       }),
       // Obx(
