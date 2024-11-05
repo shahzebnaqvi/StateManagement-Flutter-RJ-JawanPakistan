@@ -6,6 +6,21 @@ class AboutController extends GetxController {
   void onInit() {
     super.onInit();
     data = Get.arguments["data1"];
-    print("oninit");
+    print("oninit called");
+  }
+
+  @override
+  void onReady() {
+    print("ready called");
+    // TODO: implement onReady
+    super.onReady();
+  }
+
+  @override
+  void onClose() {
+    print("onclose called");
+
+    // TODO: implement onClose
+    super.onClose();
   }
 }

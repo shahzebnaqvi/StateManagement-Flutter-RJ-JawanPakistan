@@ -7,7 +7,7 @@ import 'package:statemanagement_flutter/views/about/about_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
-  HomeController homeControl = Get.put(HomeController());
+  HomeController homeControl = Get.put<HomeController>(HomeController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,10 @@ class HomeScreen extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Get.to(() => AboutScreen(), arguments: {"data1": "abc"});
+                Get.to(
+                  () => AboutScreen(),
+                  arguments: {"data1": "abc"},
+                );
                 // Get.off(AboutScreen());
                 // Get.offAll(AboutScreen());
                 // Get.offUntil(page, (route) => false);

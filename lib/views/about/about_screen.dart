@@ -9,8 +9,10 @@ import 'package:statemanagement_flutter/utils/color_constant.dart';
 // singleton
 class AboutScreen extends StatelessWidget {
   AboutScreen({super.key});
-  AboutController aboutControl = Get.put(AboutController());
-  HomeController homeControl = Get.put(HomeController());
+  AboutController aboutControl = Get.put(
+    AboutController(),
+  );
+  HomeController homeControl = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {
