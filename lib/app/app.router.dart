@@ -9,18 +9,18 @@ import 'package:flutter/material.dart' as _i4;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i5;
-import 'package:statemanagement_flutter/ui/views/home/home_view.dart' as _i2;
-import 'package:statemanagement_flutter/ui/views/startup/startup_view.dart'
+import 'package:statemanagement_flutter/ui/views/aboutus/aboutus_view.dart'
     as _i3;
+import 'package:statemanagement_flutter/ui/views/home/home_view.dart' as _i2;
 
 class Routes {
   static const homeView = '/home-view';
 
-  static const startupView = '/startup-view';
+  static const aboutUsView = '/about-us-view';
 
   static const all = <String>{
     homeView,
-    startupView,
+    aboutUsView,
   };
 }
 
@@ -31,8 +31,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i2.HomeView,
     ),
     _i1.RouteDef(
-      Routes.startupView,
-      page: _i3.StartupView,
+      Routes.aboutUsView,
+      page: _i3.AboutUsView,
     ),
   ];
 
@@ -43,9 +43,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i3.StartupView: (data) {
+    _i3.AboutUsView: (data) {
       return _i4.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.StartupView(),
+        builder: (context) => const _i3.AboutUsView(),
         settings: data,
       );
     },
@@ -73,14 +73,14 @@ extension NavigatorStateExtension on _i5.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToStartupView([
+  Future<dynamic> navigateToAboutUsView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.startupView,
+    return navigateTo<dynamic>(Routes.aboutUsView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -101,14 +101,14 @@ extension NavigatorStateExtension on _i5.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithStartupView([
+  Future<dynamic> replaceWithAboutUsView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.startupView,
+    return replaceWith<dynamic>(Routes.aboutUsView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

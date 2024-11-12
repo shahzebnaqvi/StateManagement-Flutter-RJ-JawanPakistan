@@ -1,7 +1,7 @@
 import 'package:statemanagement_flutter/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:statemanagement_flutter/ui/dialogs/info_alert/info_alert_dialog.dart';
+import 'package:statemanagement_flutter/ui/views/aboutus/aboutus_view.dart';
 import 'package:statemanagement_flutter/ui/views/home/home_view.dart';
-import 'package:statemanagement_flutter/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 // @stacked-import
@@ -9,7 +9,8 @@ import 'package:stacked_services/stacked_services.dart';
 @StackedApp(
   routes: [
     MaterialRoute(page: HomeView),
-    MaterialRoute(page: StartupView),
+    MaterialRoute(page: AboutUsView),
+
     // @stacked-route
   ],
   dependencies: [
