@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "${model.counter}",
+                    "${model.cartService.countervalue}",
                     style: TextStyle(fontSize: 50),
                   ),
                   ElevatedButton(

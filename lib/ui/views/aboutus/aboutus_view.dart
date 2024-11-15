@@ -15,6 +15,7 @@ class AboutUsView extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Text("${model.cartService.countervalue}"),
                   ElevatedButton(
                       onPressed: () {
                         model.backScreen();

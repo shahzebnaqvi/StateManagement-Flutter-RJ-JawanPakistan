@@ -1,3 +1,4 @@
+import 'package:statemanagement_flutter/services/cart_service.dart';
 import 'package:statemanagement_flutter/ui/bottom_sheets/notice/notice_sheet.dart';
 import 'package:statemanagement_flutter/ui/dialogs/info_alert/info_alert_dialog.dart';
 import 'package:statemanagement_flutter/ui/views/aboutus/aboutus_view.dart';
@@ -17,6 +18,7 @@ import 'package:stacked_services/stacked_services.dart';
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),
+    LazySingleton(classType: CartService),
     // @stacked-service
   ],
   bottomsheets: [
